@@ -51,8 +51,10 @@ Custom Header and JSON Post
 ------------
 JSON Postdata will automatically be detected, and not parsed like regular post. Content-Length calculated automatically.
 
+Headers are delimited by the string "||" as shown on Line 7 of the example below.
+
 ```java
-   import src.*;
+	import src.*;
     
     public class Main{
         public requests = new Requests();

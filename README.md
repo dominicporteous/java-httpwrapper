@@ -40,9 +40,32 @@ Posting example ticket to UserVoice API.
     		+ "ticket[subject]=SUBJECT&"
     		+ "ticket[message]=MESSAGE";
     		
-    		String res = Main.requests.post("https://test.uservoice.com/api/v1/tickets.json", post);
+    		String res = requests.post("https://test.uservoice.com/api/v1/tickets.json", post);
     		
     		System.out.println( "Result :: " + res );
         }
     }
+```
+
+Custom Header and JSON Post
+------------
+JSON Postdata will automatically be detected, and not parsed like regular post. Content-Length calculated automatically.
+
+```java
+   import src.*;
+    
+    public class Main{
+        public requests = new Requests();
+        
+        public static void main(String[] args){
+    		String url = "https://yourtestapi.app.com/api/endpoint";
+    		String post = "{\"testfield\":true}";
+	        String headers = "Content-Type: application/json||X-HTTP-Method-Override: PUT";
+	        
+	        String result = requests.post(url, post, headers);
+    		
+    		System.out.println( "Result :: " + res );
+        }
+    }
+ 
 ```

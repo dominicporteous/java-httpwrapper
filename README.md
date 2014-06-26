@@ -3,6 +3,29 @@ java-httpwrapper
 
 Powerful HTTP URLConnection wrapper for Java. Includes custom header as well as cookie persistence.
 
+Supports posting JSON as well.
+
+Basic Example
+-------------
+Get contents of http://www.google.com
+
+```java
+    import src.*;
+    
+    public class Main{
+        public requests = new Requests();
+        
+        public static void main(String[] args){
+    		String res = Main.requests.get("http://www.google.com");
+    		System.out.println( "Result :: " + res );
+        }
+    }
+```
+
+Simple Post Example
+-------------
+Posting example ticket to UserVoice API.
+
 ```java
     import src.*;
     

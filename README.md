@@ -1,7 +1,7 @@
-java-httpwrapper
+java-requests
 ================
 
-Powerful HTTP URLConnection wrapper for Java. Includes custom header as well as cookie persistence.
+Powerful multi-wrapper for HTTP URLConnection in Java. Includes custom header as well as cookie persistence.
 
 Supports posting JSON as well.
 
